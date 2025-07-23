@@ -153,6 +153,11 @@ explore: order_items {
     sql_on: ${products.brand} = ${test_d_table.brand};;
     relationship: many_to_one
   }
+  join: test_sd_table {
+    type: left_outer
+    sql_on: ${users.id} = ${test_sd_table.id};;
+    relationship: many_to_one
+  }
 
   join: users {
     type: left_outer
